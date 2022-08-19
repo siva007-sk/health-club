@@ -36,7 +36,7 @@ export class PlaceFitnessTrainerAppointmentComponent implements OnInit {
     this.fitnessForm = this.fb.group({
       name: ["", Validators.required],
       age: ["", Validators.required],
-      email: ["", Validators.required],
+      email: ["", [Validators.required, Validators.pattern("[^ @]*@[^ @]*")]],
       phoneNumber: ["", Validators.required],
       addressLine1: ["", Validators.required],
       addressLine2: ["", Validators.required],

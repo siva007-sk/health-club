@@ -1,1 +1,44 @@
-<div>View Appointment...</div>
+<div>
+  <table>
+    <thead>
+      <th>Sl No.</th>
+      <th>Name</th>
+      <th>Phone</th>
+      <th>Email</th>
+      <th>Age</th>
+      <th>Complete Address</th>
+      <th>Physio Required</th>
+      <th>Package</th>
+      <th>Total Amount</th>
+    </thead>
+    <tbody *ngFor="let appointment of appointments; let index">
+      <td>
+        {{ index }}
+      </td>
+      <td>
+        {{ appointment.firstname + " " + appointment.lastname }}
+      </td>
+      <td>
+        {{ appointment.phonenumber }}
+      </td>
+      <td>
+        {{ appointment.email }}
+      </td>
+      <td>
+        {{ appointment.age }}
+      </td>
+      <td>
+        {{ appointment.streetaddress }},{{ appointment.city }},{{
+          appointment.state
+        }},{{ appointment.country }}, pin-{{ appointment.pincode }}
+      </td>
+      <td>
+        {{ appointment.physiotherapist }}
+      </td>
+      <td>
+        {{ appointment.packages }}
+      </td>
+      <td>{{ appointment.inr }}:{{ appointment.paisa }}</td>
+    </tbody>
+  </table>
+</div>

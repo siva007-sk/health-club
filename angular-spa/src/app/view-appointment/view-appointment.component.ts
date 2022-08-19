@@ -1,13 +1,21 @@
 import { Component, OnInit } from "@angular/core";
+import { UserService } from "../_services";
 
 @Component({
   selector: "app-view-appointment",
   templateUrl: "./view-appointment.component.html",
 })
 export class ViewAppointmentComponent implements OnInit {
-  constructor() {}
+  appointments: any[] = [];
+  constructor(private _service: UserService) {}
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.getfitness();
+  }
 
-  getfitness() {}
+  getfitness() {
+    this._service.getfitnessdata().subscribe((data) => {
+      this.appointments = data;
+    });
+  }
 }
