@@ -1,10 +1,45 @@
-<div class="logo"></div>
-<div class="navbar"></div>
-
-<div class="sidebar">
-  <button (click)="landingpage()">Home</button><br />
-  <button (click)="placeAppointment()">Place Appointment</button><br />
-  <button (click)="viewAppointment()">View Appointment</button><br />
-  <button (click)="contactUspage()">Contact Us</button>
-</div>
-<router-outlet></router-outlet>
+<header>
+  <div class="navbar">
+    <div class="logo">GET FIT</div>
+    <ul>
+      <li>
+        <a href="/landing-page">Home</a>
+      </li>
+      <li>
+        <a href="/place-fitness-trainer-appointment">Place Appointment</a>
+      </li>
+      <li>
+        <a href="/view-appointment">View Appointment</a>
+      </li>
+      <li>
+        <a href="/contact-us">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</header>
+<section>
+  <router-outlet></router-outlet>
+</section>
+<footer>
+  <div class="footer-info">
+    <div>
+      <h4>Useful Links</h4>
+      <div class="sidebar">
+        <a (click)="landingpage()">Home</a>
+        <a (click)="placeAppointment()">Place Appointment</a>
+        <a (click)="viewAppointment()">View Appointment</a>
+        <a (click)="contactUspage()">Contact Us</a>
+      </div>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <p>address: kharabela nagar, bhubaneshwar</p>
+      <p>email: get-fit@gmail.com</p>
+      <p>phone: +91-7528596352</p>
+      <p>fax: 202053</p>
+    </div>
+  </div>
+  <div class="footer-copyright">
+    <small>&copy; 2022 Copyright GET FIT health club</small>
+  </div>
+</footer>

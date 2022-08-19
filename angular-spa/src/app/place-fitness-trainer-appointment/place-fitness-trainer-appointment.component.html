@@ -1,1 +1,121 @@
-<div>Place fiteness Trainer appointment...</div>
+<form [formGroup]="fitnessForm">
+  <div>
+    <label for="name"> Name </label>
+    <input type="text" id="name" formControlName="name" />
+    <label for="age"> Age </label>
+    <input type="number" id="age" formControlName="age" />
+  </div>
+  <div>
+    <label for="email"> Email </label>
+    <input type="email" id="email" formControlName="email" />
+    <label for="phoneNumber">Mobile Number</label>
+    <input type="number" id="phoneNumber" formControlName="phoneNumber" />
+  </div>
+  <div>
+    <label for="addressLine1"> Address Line 1 </label>
+    <input type="text" id="addressLine1" formControlName="addressLine1" />
+  </div>
+  <div>
+    <label for="addressLine2"> Address Line 2 </label>
+    <input type="text" id="addressLine2" formControlName="addressLine2" />
+  </div>
+  <div>
+    <label for="city"> City </label>
+    <input type="text" id="city" formControlName="city" />
+    <label for="state">State </label>
+    <input type="text" id="state" formControlName="state" />
+  </div>
+  <div>
+    <label for="country"> Country </label>
+    <input type="text" id="country" formControlName="country" />
+    <label for="pinCode">Pin Code </label>
+    <input type="number" id="pinCode" formControlName="pinCode" />
+  </div>
+  <div>
+    <label>Trainer Preference</label> <br />
+    <input
+      type="radio"
+      formControlName="trainerPreference"
+      id="maleTrainer"
+      value="maleTrainer"
+    />
+    <label for="maleTrainer">Male Trainer</label>
+    <input
+      type="radio"
+      formControlName="trainerPreference"
+      id="femaleTrainer"
+      value="femaleTrainer"
+    />
+    <label for="femaleTrainer">Female Trainer</label>
+    <input
+      type="radio"
+      formControlName="trainerPreference"
+      id="noPreference"
+      value="noPreference"
+    />
+    <label for="noPreference">No Preference</label>
+  </div>
+  <div>
+    <label>Do you need a physiotherapist</label> <br />
+    <input
+      type="radio"
+      formControlName="needPhysioTherapist"
+      id="yes"
+      value="yes"
+    />
+    <label for="yes">Yes</label>
+
+    <input
+      type="radio"
+      formControlName="needPhysioTherapist"
+      id="no"
+      value="no"
+    />
+    <label for="no">No</label>
+  </div>
+  <div>
+    <label>Select Package</label><br />
+    <input
+      type="radio"
+      formControlName="package"
+      id="oneTime"
+      value="500"
+      (change)="calculateAmount()"
+    />
+    <label for="oneTime">One time appointment(Rs. 500/-)</label>
+
+    <br />
+    <input
+      type="radio"
+      formControlName="package"
+      id="fourSessions"
+      value="1600"
+      (change)="calculateAmount()"
+    />
+    <label for="fourSessions">4 sessions per week(Rs. 400/- per session)</label>
+
+    <br />
+    <input
+      type="radio"
+      formControlName="package"
+      id="fiveSessions"
+      value="1500"
+      (change)="calculateAmount()"
+    />
+    <label for="fiveSessions">5 sessions per week(Rs. 300/- per session)</label>
+  </div>
+  <div>
+    <label for="week"> Weeks </label>
+    <input
+      type="number"
+      id="week"
+      formControlName="week"
+      (change)="calculateAmount()"
+    />
+  </div>
+  <div>
+    <label for="amount"> Amount </label>
+    <input type="number" id="amount" formControlName="amount" readonly />
+  </div>
+  <button type="submit" (click)="onSubmit()">Submit</button>
+</form>

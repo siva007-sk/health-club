@@ -1,1 +1,67 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  padding: 16px;
+  background: bisque;
+  height: 100vh;
+}
+section {
+  padding: 16px;
+  height: 70vh;
+}
+
+.sidebar {
+  display: flex;
+  flex-direction: column;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navbar ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 50%;
+  list-style: none;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: chocolate;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: bold;
+}
+
+.footer-info {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.footer-copyright {
+  margin-top: 20px;
+  text-align: center;
+}
+button {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid cornflowerblue;
+  background: cornflowerblue;
+  color: white;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.call-to-action {
+  margin-top: 24px;
+  text-align: center;
+}
